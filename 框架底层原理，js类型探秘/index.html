@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="DN.js"></script>
+		<script>
+			console.log(DN);
+			console.log($);
+			console.log($.type(1));
+			console.log(DN.type(''));
+			
+			//类型  指由各种特殊食物或现象抽象出来的共同点
+			
+			//不同类型的变量具有不同的参数和不同的方法
+			
+			/*console.log({}.length);
+			console.log(({}+{}).length);
+			console.log({}+{});//[object Object]
+			
+			var a = 'jcf';
+			a += "";//确保a是个字符串的类型
+			a.split('');*/
+//			console.log(a);
+			//js ES5规范和语法的
+			
+			/*console.log(Object.prototype.toString.call(undefined));
+			console.log(Object.prototype.toString.call(null));
+			
+			console.log(Object.prototype.toString.call(1));
+			console.log(Object.prototype.toString.call(''));
+			var a = {};
+			console.log(Object.prototype.toString.call(a));
+			var b = function(){};
+			console.log(Object.prototype.toString.call(b));
+			var c = [];
+			console.log(Object.prototype.toString.call(c));
+			var d = new Date();
+			console.log(Object.prototype.toString.call(d));
+			var e = new Error();
+			console.log(Object.prototype.toString.call(e));*/
+			
+			//勤学苦练 原理  源码  设计模式  => 勤学苦练   偷懒    设计模式
+			
+			//思路：
+			//1.如果是基本类型，就使用typeof 就够了
+			//2.如果是引用类型，就使用toString
+			//3.同一类型大小写   很重要    ！！细节
+//			console.log(typeof 1);//number
+			
+			
+			//第一版  IE6  null和undefined  会被Object.prototype.toString识别成[object Object]
+			/*var class2type = {};
+			//生成class2type的类型映射
+			"Boolean Number String Function Array Date RegExp Object Eorror Null Undefined".split(" ").map(function(item ,index){
+				class2type['[object' + item + "]"] = item.toLowerCase();
+			})
+			
+			function type(obj){
+				if(obj == null){
+					return obj + "";//解决ie6
+				}
+				return typeof obj === "object" || typeof obj ==="function" ?class2type[Object.prototype.toString.call(obj)] || "object" : typeof obj;
+			}
+			
+			console.log(type(1));
+			console.log(type(''));
+			console.log(type([]));*/
+			
+			/*//第二版
+			
+			function ifFunction(obj){
+				return type(obj) === 'function';
+			}
+			
+			console.log(isFunction('jcf'));*/
+		</script>
+	</body>
+</html> 
