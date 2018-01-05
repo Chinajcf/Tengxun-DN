@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">123</div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<span class="box"></span>
+		<script src="jq-1.1.0.js"></script>
+		<script>
+			/*$(function(){
+				alert(1);
+			})
+			$(function(){ //window.onload  =》出现一次   $(function(){})
+				alert(2);
+			})*/
+			
+			console.log($("#box"));
+			console.log($(".box"));
+			$('.box').click(function(){
+				alert(1);
+			});
+//			console.log(HTMLDocument);
+//			window.$//挂载到window对象上
+//          window就是宿主环境
+//		    alert(alert == window.alert)//true
+			
+			//基于原型的面向对象
+		</script>
+	</body>
+</html>
